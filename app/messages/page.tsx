@@ -1159,7 +1159,7 @@ const ChatShell: React.FC = () => {
         `${activeDmPeer?.user?.first_name || ""} ${activeDmPeer?.user?.last_name || ""}`.trim() ||
         activeRoom.name
       : activeRoom.name
-    : "MUN ONE";
+    : "MUN WEBAPP";
 
   const isActivePeerOnline = Boolean(
     activeRoom?.room_type === "dm" && activeDmPeer?.user_id && onlineUsers.has(String(activeDmPeer.user_id)),
@@ -1367,7 +1367,7 @@ const ChatShell: React.FC = () => {
         <div className="mx-auto flex h-full w-full max-w-[1120px] min-h-0 flex-col px-5 py-4">
           <section className="surface-card flex min-h-0 flex-1 items-center justify-center px-6">
             <div className="w-full max-w-xl">
-              <p className="text-center text-sm font-semibold text-deep-red">Loading MUN ONE chats…</p>
+              <p className="text-center text-sm font-semibold text-deep-red">Loading MUN WEBAPP chats…</p>
               <div className="mt-4 h-3 w-full overflow-hidden rounded-full border border-deep-red/20 bg-[#f4ebe5]">
                 <div
                   className="h-full rounded-full bg-[#7b1f1f] shadow-sm transition-[width] duration-300 ease-out"

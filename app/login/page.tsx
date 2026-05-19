@@ -404,7 +404,7 @@ const Login = () => {
                 ) : (
                   <div className="flex items-center justify-center text-[#FFFDFB]">
                     <Rocket size={18} className="mr-2 text-[#FFFDFB]" />
-                    <span className="text-[#FFFDFB]">Enter MUN ONE</span>
+                    <span className="text-[#FFFDFB]">Enter MUN WEBAPP</span>
                   </div>
                 )}
               </button>

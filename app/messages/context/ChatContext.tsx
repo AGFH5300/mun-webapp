@@ -894,9 +894,9 @@ export const ChatProvider: React.FC<React.PropsWithChildren> = ({ children }) =>
   useEffect(() => {
     if (typeof document === 'undefined' || typeof window === 'undefined') return;
     if (!defaultDocumentTitleRef.current) {
-      defaultDocumentTitleRef.current = document.title || 'MUN ONE';
+      defaultDocumentTitleRef.current = document.title || 'MUN WEBAPP';
     }
-    const baseTitle = defaultDocumentTitleRef.current || 'MUN ONE';
+    const baseTitle = defaultDocumentTitleRef.current || 'MUN WEBAPP';
     document.title = totalUnreadCount > 0 ? `(${totalUnreadCount}) ${baseTitle}` : baseTitle;
     window.localStorage.setItem('mun.messages.unreadTotal', String(totalUnreadCount));
     window.dispatchEvent(new CustomEvent('mun:messages-unread-updated', { detail: { totalUnreadCount } }));
