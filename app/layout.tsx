@@ -24,7 +24,7 @@ const newsreader = Newsreader({
 });
 
 export const metadata: Metadata = {
-  title: 'MUN ONE',
+  title: 'MUN WEBAPP',
   description: 'MUN conference platform',
 };
 
