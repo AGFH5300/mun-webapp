@@ -202,8 +202,8 @@ const MessageBubble: React.FC<Props> = ({
       }
     };
 
-    window.addEventListener('vofmun-message-menu-opened', handleAnotherMenuOpen);
-    return () => window.removeEventListener('vofmun-message-menu-opened', handleAnotherMenuOpen);
+    window.addEventListener('mun-message-menu-opened', handleAnotherMenuOpen);
+    return () => window.removeEventListener('mun-message-menu-opened', handleAnotherMenuOpen);
   }, [bubbleMenuId]);
 
   const clampPosition = React.useCallback((x: number, y: number, width: number, height: number) => {
@@ -515,7 +515,7 @@ const MessageBubble: React.FC<Props> = ({
             if (isSelectMode) return;
             event.preventDefault();
             event.stopPropagation();
-            window.dispatchEvent(new CustomEvent('vofmun-message-menu-opened', { detail: { id: bubbleMenuId } }));
+            window.dispatchEvent(new CustomEvent('mun-message-menu-opened', { detail: { id: bubbleMenuId } }));
             const menuWidth = 220;
             const menuHeight = isDeleted ? 60 : isOwn ? 314 : 264;
             setContextMenuPosition(clampPosition(event.clientX, event.clientY, menuWidth, menuHeight));

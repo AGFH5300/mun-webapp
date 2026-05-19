@@ -1,7 +1,7 @@
 # 🚫 PROPRIETARY — ALL RIGHTS RESERVED (NOT OPEN SOURCE)
 
 ## About
-VOFMUN App is a Next.js/React codebase built for Voices of the Future Model United Nations (VOFMUN).
+MUN App is a Next.js/React codebase built for Voices of the Future Model United Nations (MUN).
 This repository is publicly viewable for reference only.
 
 ## License / Usage Restrictions

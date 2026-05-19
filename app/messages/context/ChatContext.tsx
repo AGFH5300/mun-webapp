@@ -894,27 +894,27 @@ export const ChatProvider: React.FC<React.PropsWithChildren> = ({ children }) =>
   useEffect(() => {
     if (typeof document === 'undefined' || typeof window === 'undefined') return;
     if (!defaultDocumentTitleRef.current) {
-      defaultDocumentTitleRef.current = document.title || 'VOFMUN ONE';
+      defaultDocumentTitleRef.current = document.title || 'MUN ONE';
     }
-    const baseTitle = defaultDocumentTitleRef.current || 'VOFMUN ONE';
+    const baseTitle = defaultDocumentTitleRef.current || 'MUN ONE';
     document.title = totalUnreadCount > 0 ? `(${totalUnreadCount}) ${baseTitle}` : baseTitle;
-    window.localStorage.setItem('vofmun.messages.unreadTotal', String(totalUnreadCount));
-    window.dispatchEvent(new CustomEvent('vofmun:messages-unread-updated', { detail: { totalUnreadCount } }));
+    window.localStorage.setItem('mun.messages.unreadTotal', String(totalUnreadCount));
+    window.dispatchEvent(new CustomEvent('mun:messages-unread-updated', { detail: { totalUnreadCount } }));
   }, [totalUnreadCount]);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
     if (!userId) {
-      window.localStorage.setItem('vofmun.messages.notificationTotal', '0');
-      window.dispatchEvent(new CustomEvent('vofmun:messages-notification-updated', { detail: { totalNotificationCount: 0 } }));
+      window.localStorage.setItem('mun.messages.notificationTotal', '0');
+      window.dispatchEvent(new CustomEvent('mun:messages-notification-updated', { detail: { totalNotificationCount: 0 } }));
       return;
     }
     const incomingPending = friendRequests.filter((req) => req.status === 'pending' && String(req.receiver_id) === String(userId)).length;
     const outboundUpdates = friendRequests.filter((req) => (req.status === 'accepted' || req.status === 'rejected') && String(req.sender_id) === String(userId)).length;
     const totalNotificationCount = incomingPending + outboundUpdates;
     logChatDebug('notifications:count_updated', { incomingPending, outboundUpdates, totalNotificationCount });
-    window.localStorage.setItem('vofmun.messages.notificationTotal', String(totalNotificationCount));
-    window.dispatchEvent(new CustomEvent('vofmun:messages-notification-updated', { detail: { totalNotificationCount } }));
+    window.localStorage.setItem('mun.messages.notificationTotal', String(totalNotificationCount));
+    window.dispatchEvent(new CustomEvent('mun:messages-notification-updated', { detail: { totalNotificationCount } }));
   }, [friendRequests, userId]);
 
   useEffect(() => {

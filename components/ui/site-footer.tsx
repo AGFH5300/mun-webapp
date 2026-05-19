@@ -14,7 +14,7 @@ const SiteFooter: React.FC = () => {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center space-x-2 mb-3 sm:mb-4">
-              <span className="font-bold text-lg sm:text-xl">VOFMUN</span>
+              <span className="font-bold text-lg sm:text-xl">MUN</span>
             </div>
             <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
               Empowering tomorrow's leaders through diplomatic excellence and global dialogue.
@@ -26,25 +26,25 @@ const SiteFooter: React.FC = () => {
             <h3 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4">Quick Links</h3>
             <ul className="space-y-1.5 sm:space-y-2">
               <li>
-                <Link href="vofmun.org/signup" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
+                <Link href="mun.org/signup" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
                   Register
                 </Link>
               </li>
               <li>
                 <Link
-                  href="vofmun.org/proof-of-payment"
+                  href="mun.org/proof-of-payment"
                   className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm"
                 >
                   Proof of Payment
                 </Link>
               </li>
               <li>
-                <Link href="vofmun.org/resources" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
+                <Link href="mun.org/resources" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
                   Resources
                 </Link>
               </li>
               <li>
-                <Link href="vofmun.org/secretariat" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
+                <Link href="mun.org/secretariat" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
                   Secretariat
                 </Link>
               </li>
@@ -56,38 +56,38 @@ const SiteFooter: React.FC = () => {
             <h3 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4">Committees</h3>
             <ul className="space-y-1.5 sm:space-y-2">
               <li>
-                <Link href="vofmun.org/committees/ga1" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
+                <Link href="mun.org/committees/ga1" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
                   General Assembly
                 </Link>
               </li>
 
               <li>
-                <Link href="vofmun.org/committees/ecosoc" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
+                <Link href="mun.org/committees/ecosoc" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
                   ECOSOC
                 </Link>
               </li>
               <li>
-                <Link href="vofmun.org/committees/who" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
+                <Link href="mun.org/committees/who" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
                   WHO
                 </Link>
               </li>
               <li>
-                <Link href="vofmun.org/committees/unodc" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
+                <Link href="mun.org/committees/unodc" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
                   UNODC
                 </Link>
               </li>
               <li>
-                <Link href="vofmun.org/committees/uncstd" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
+                <Link href="mun.org/committees/uncstd" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
                   UNCSTD
                 </Link>
               </li>
               <li>
-                <Link href="vofmun.org/committees/icj" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
+                <Link href="mun.org/committees/icj" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
                   ICJ
                 </Link>
               </li>
               <li>
-                <Link href="vofmun.org/committees/icrcc" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
+                <Link href="mun.org/committees/icrcc" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
                   ICRCC
                 </Link>
               </li>
@@ -98,10 +98,10 @@ const SiteFooter: React.FC = () => {
           <div>
             <h3 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4">Contact</h3>
             <ul className="space-y-1.5 sm:space-y-2">
-              <li className="text-gray-400 text-xs sm:text-sm">contact@vofmun.org</li>
+              <li className="text-gray-400 text-xs sm:text-sm">contact@mun.org</li>
               <li>
                 <Link
-                  href="https://www.linkedin.com/company/vofmun"
+                  href="https://www.linkedin.com/company/mun"
                   target="_blank"
                   className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm"
                 >
@@ -110,7 +110,7 @@ const SiteFooter: React.FC = () => {
               </li>
               <li>
                 <Link
-                  href="https://www.instagram.com/vofmun"
+                  href="https://www.instagram.com/mun"
                   target="_blank"
                   className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm"
                 >

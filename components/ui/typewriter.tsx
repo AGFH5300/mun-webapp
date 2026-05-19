@@ -11,7 +11,7 @@ export default function TypeWriter() {
   const [charIndex, setCharIndex] = useState(0);
 
   const words = useMemo<string[]>(() => [
-    "Welcome to VOFMUN ONE",
+    "Welcome to MUN ONE",
     "Your one stop hub for collaboration",
     "Your one stop hub for innovation",
     "Your one stop hub for inspiration",

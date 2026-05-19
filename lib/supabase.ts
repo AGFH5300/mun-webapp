@@ -43,13 +43,13 @@ const createSupabaseClient = () =>
   });
 
 const globalForSupabase = globalThis as typeof globalThis & {
-  __vofmunSupabaseClient?: ReturnType<typeof createSupabaseClient>;
+  __munSupabaseClient?: ReturnType<typeof createSupabaseClient>;
 };
 
-const supabase = globalForSupabase.__vofmunSupabaseClient ?? createSupabaseClient();
+const supabase = globalForSupabase.__munSupabaseClient ?? createSupabaseClient();
 
 if (isBrowser) {
-  globalForSupabase.__vofmunSupabaseClient = supabase;
+  globalForSupabase.__munSupabaseClient = supabase;
 }
 
 export default supabase;
