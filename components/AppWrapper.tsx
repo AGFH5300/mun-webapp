@@ -4,7 +4,6 @@
 
 import { useSession } from "../app/context/sessionContext";
 import CustomNav from "@/components/ui/customnav";
-import SiteFooter from "@/components/ui/site-footer";
 import role from "@/lib/roles";
 import { usePathname } from "next/navigation";
 
@@ -17,7 +16,7 @@ export default function AppWrapper({ children }: AppWrapperProps) {
   const pathname = usePathname();
   const userRole = role(currentUser);
   
-  // Standalone auth pages should not show global navigation/footer
+  // Standalone auth pages should not show global navigation
   const isStandaloneAuthRoute = pathname === "/login" || pathname === "/reset-password";
   const showNav = !isStandaloneAuthRoute;
   
@@ -43,7 +42,6 @@ export default function AppWrapper({ children }: AppWrapperProps) {
         />
       )}
       <main className={`flex-1 ${showNav ? "pt-20" : ""}`}>{children}</main>
-      {!isStandaloneAuthRoute && <SiteFooter />}
     </div>
   );
 }
