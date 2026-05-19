@@ -100,8 +100,8 @@ const ConversationListItem: React.FC<Props> = ({ room, isActive, onSelect, onTog
       }
     };
 
-    window.addEventListener('vofmun-conversation-menu-opened', handleAnotherMenuOpen);
-    return () => window.removeEventListener('vofmun-conversation-menu-opened', handleAnotherMenuOpen);
+    window.addEventListener('mun-conversation-menu-opened', handleAnotherMenuOpen);
+    return () => window.removeEventListener('mun-conversation-menu-opened', handleAnotherMenuOpen);
   }, [menuId]);
 
   return (
@@ -117,7 +117,7 @@ const ConversationListItem: React.FC<Props> = ({ room, isActive, onSelect, onTog
         onContextMenu={(event) => {
           event.preventDefault();
           event.stopPropagation();
-          window.dispatchEvent(new CustomEvent('vofmun-conversation-menu-opened', { detail: { id: menuId } }));
+          window.dispatchEvent(new CustomEvent('mun-conversation-menu-opened', { detail: { id: menuId } }));
           setContextMenuPosition({ x: event.clientX, y: event.clientY });
         }}
         onClick={() => onSelect(room)}

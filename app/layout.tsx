@@ -24,8 +24,8 @@ const newsreader = Newsreader({
 });
 
 export const metadata: Metadata = {
-  title: 'VOFMUN ONE',
-  description: 'VOFMUN conference platform',
+  title: 'MUN ONE',
+  description: 'MUN conference platform',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

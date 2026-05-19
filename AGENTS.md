@@ -64,9 +64,9 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
 
-## VOFMUN Project Addendum
+## MUN Project Addendum
 
-- Treat this as a production-facing VOFMUN website/webapp.
+- Treat this as a production-facing MUN website/webapp.
 - Inspect before editing.
 - Preserve existing routing, auth, Supabase, deployment, and environment behavior.
 - Make minimal surgical changes only.

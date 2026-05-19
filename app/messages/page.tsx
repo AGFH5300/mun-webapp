@@ -55,7 +55,7 @@ const EmojiPicker = dynamic(() => import("emoji-picker-react"), { ssr: false });
 const SIDEBAR_MIN_WIDTH = 280;
 const SIDEBAR_MAX_WIDTH = 560;
 const SIDEBAR_DEFAULT_WIDTH = 360;
-const SIDEBAR_WIDTH_STORAGE_KEY = "vofmun.messages.sidebar.width";
+const SIDEBAR_WIDTH_STORAGE_KEY = "mun.messages.sidebar.width";
 
 const clampSidebarWidth = (value: number) => Math.min(SIDEBAR_MAX_WIDTH, Math.max(SIDEBAR_MIN_WIDTH, value));
 
@@ -195,7 +195,7 @@ const ChatShell: React.FC = () => {
   const [draftsByRoom, setDraftsByRoom] = useState<Record<string, string>>(() => {
     if (typeof window === "undefined") return {};
     try {
-      const stored = window.localStorage.getItem("vofmun.messages.roomDrafts");
+      const stored = window.localStorage.getItem("mun.messages.roomDrafts");
       if (!stored) return {};
       const parsed = JSON.parse(stored);
       return parsed && typeof parsed === "object" ? parsed : {};
@@ -484,7 +484,7 @@ const ChatShell: React.FC = () => {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    window.localStorage.setItem("vofmun.messages.roomDrafts", JSON.stringify(draftsByRoom));
+    window.localStorage.setItem("mun.messages.roomDrafts", JSON.stringify(draftsByRoom));
   }, [draftsByRoom]);
 
   useEffect(() => {
@@ -1159,7 +1159,7 @@ const ChatShell: React.FC = () => {
         `${activeDmPeer?.user?.first_name || ""} ${activeDmPeer?.user?.last_name || ""}`.trim() ||
         activeRoom.name
       : activeRoom.name
-    : "VOFMUN ONE";
+    : "MUN ONE";
 
   const isActivePeerOnline = Boolean(
     activeRoom?.room_type === "dm" && activeDmPeer?.user_id && onlineUsers.has(String(activeDmPeer.user_id)),
@@ -1367,7 +1367,7 @@ const ChatShell: React.FC = () => {
         <div className="mx-auto flex h-full w-full max-w-[1120px] min-h-0 flex-col px-5 py-4">
           <section className="surface-card flex min-h-0 flex-1 items-center justify-center px-6">
             <div className="w-full max-w-xl">
-              <p className="text-center text-sm font-semibold text-deep-red">Loading VOFMUN ONE chats…</p>
+              <p className="text-center text-sm font-semibold text-deep-red">Loading MUN ONE chats…</p>
               <div className="mt-4 h-3 w-full overflow-hidden rounded-full border border-deep-red/20 bg-[#f4ebe5]">
                 <div
                   className="h-full rounded-full bg-[#7b1f1f] shadow-sm transition-[width] duration-300 ease-out"

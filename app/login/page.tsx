@@ -166,7 +166,7 @@ const Login = () => {
                       width={200}
                       height={200}
                       src="/logo.svg"
-                      alt="VOFMUN"
+                      alt="MUN"
                       className="mx-auto"
                     />
                   </motion.div>
@@ -311,7 +311,7 @@ const Login = () => {
                       data-testid="text-login-header"
                       style={{ color: brandDarkRed, }}
                     >
-                      VOFMUN Portal
+                      MUN Portal
                     </h1>
                     <p className="mt-3 text-base text-[#701E1E]/80">
                       Sign in to manage your conference experience and stay connected.
@@ -404,7 +404,7 @@ const Login = () => {
                 ) : (
                   <div className="flex items-center justify-center text-[#FFFDFB]">
                     <Rocket size={18} className="mr-2 text-[#FFFDFB]" />
-                    <span className="text-[#FFFDFB]">Enter VOFMUN ONE</span>
+                    <span className="text-[#FFFDFB]">Enter MUN ONE</span>
                   </div>
                 )}
               </button>

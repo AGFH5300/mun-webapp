@@ -25,7 +25,7 @@ export default {
         heading: ["Merriweather", "Playfair Display", "Georgia", "serif"],
       },
       colors: {
-        // Primary Colors - VOFMUN branding
+        // Primary Colors - MUN branding
         'deep-red': '#701E1E',
         'dark-burgundy': '#8B2424',
         'primary-peach': '#FFEBDD',
